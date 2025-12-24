@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>LOVE LYRICS </title>
+    <meta name="description" content="A romantic audio player with typewriter lyrics and photo gallery." />
+
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+    <!-- Hero Section -->
+    <header class="hero">
+        <div class="hero-img-wrapper">
+            <img src="asset/1.jpg" alt="Romantic Scenery" class="hero-img" />
+        </div>
+        <div class="overlay"></div>
+        <h1>Our Love..</h1>
+    </header>
+
+    <main class="container">
+
+        <!-- Lyrics Section -->
+        <section class="lyrics-container" aria-live="polite">
+            <div id="lyrics-box" class="lyrics"></div>
+            <span class="cursor">|</span>
+        </section>
+
+        <!-- Player Controls -->
+        <section class="player-controls">
+
+            <!-- Time Display -->
+            <div class="time-display">
+                <span id="current-time">0:00</span> /
+                <span id="total-time">0:00</span>
+            </div>
+
+            <!-- Play Button -->
+            <button id="play-btn" class="play-btn" aria-label="Play Song">
+                <!-- Play Icon -->
+                <svg id="icon-play" viewBox="0 0 24 24" width="32" height="32" fill="currentColor">
+                    <path d="M8 5v14l11-7z"></path>
+                </svg>
+
+                <!-- Pause Icon -->
+                <svg id="icon-pause" class="hidden" viewBox="0 0 24 24" width="32" height="32" fill="currentColor">
+                    <path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"></path>
+                </svg>
+            </button>
+
+            <!-- Audio -->
+            <audio id="audio-player" preload="metadata">
+                <source src="Sambhal Ke Rakha Wo Phool Mera Tu - Finding Her _ Kushagra _ Hindi.mp3" type="audio/mpeg" />
+                Your browser does not support the audio element.
+            </audio>
+
+            <!-- Typewriter Toggle -->
+            <div class="toggle-wrapper">
+                <label class="switch">
+                    <input type="checkbox" id="typing-toggle" checked />
+                    <span class="slider round"></span>
+                </label>
+                <span class="toggle-label">Typewriter Effect</span>
+            </div>
+        </section>
+
+        <!-- Gallery -->
+        <section class="gallery-section">
+            <h2>Memories</h2>
+
+            <div class="gallery-grid">
+
+                <div class="gallery-item">
+                    <img src="img1you.jfif" data-full="img1you.jfif" alt="Memory 1" loading="lazy" />
+                    <div class="caption">♡𝕀 𝕝𝕠𝕧𝕖 𝕪𝕠𝕦♡</div>
+                </div>
+
+                <div class="gallery-item">
+                    <img src="img2you.jfif" data-full="img2you.jfif" alt="Memory 2" loading="lazy" />
+                    <div class="caption">♡𝕀 𝕝𝕠𝕧𝕖 𝕪𝕠𝕦♡</div>
+                </div>
+
+                <div class="gallery-item">
+                    <img src="img3you.jfif" data-full="img3you.jfif" alt="Memory 3" loading="lazy" />
+                    <div class="caption">♡𝕀 𝕝𝕠𝕧𝕖 𝕪𝕠𝕦♡</div>
+                </div>
+
+                <div class="gallery-item">
+                    <img src="img4you.jfif" data-full="img4you.jfif" alt="Memory 4" loading="lazy" />
+                    <div class="caption">♡𝕀 𝕝𝕠𝕧𝕖 𝕪𝕠𝕦♡</div>
+                </div>
+
+                <div class="gallery-item">
+                    <img src="img5you.jfif" data-full="img5you.jfif" alt="Memory 5" loading="lazy" />
+                    <div class="caption">♡𝕀 𝕝𝕠𝕧𝕖 𝕪𝕠𝕦♡</div>
+                </div>
+
+                <div class="gallery-item">
+                    <img src="img6you.jfif" data-full="img6you.jfif" alt="Memory 6" loading="lazy" />
+                    <div class="caption">♡𝕀 𝕝𝕠𝕧𝕖 𝕪𝕠𝕦♡</div>
+                </div>
+
+            </div>
+
+            <div class="design">
+                <b>♡𝕀 𝕝𝕠𝕧𝕖 𝕪𝕠𝕦♡</b>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p><b>ᯓ➤ To : My Love ❤️</b></p>
+        <p>ᯓ➤ From : music</p>
+    </footer>
+
+    <!-- Lightbox -->
+    <div id="lightbox" class="lightbox" aria-hidden="true" role="dialog">
+        <button id="lb-close" class="lb-close" aria-label="Close Gallery">&times;</button>
+        <button id="lb-prev" class="lb-nav lb-prev" aria-label="Previous Image">&#10094;</button>
+
+        <div class="lb-content">
+            <img id="lb-img" src="" alt="Enlarged view" />
+            <p id="lb-caption"></p>
+        </div>
+
+        <button id="lb-next" class="lb-nav lb-next" aria-label="Next Image">&#10095;</button>
+    </div>
